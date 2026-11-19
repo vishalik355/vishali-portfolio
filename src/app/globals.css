@@ -1,26 +1,118 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05070d;
+  --surface: #0c111c;
+  --surface-2: #131a2a;
+  --border: #1e2738;
+  --foreground: #eef2fa;
+  --muted: #8b96ad;
+  --accent: #3b82f6;
+  --accent-2: #22d3ee;
+  --accent-3: #818cf8;
+  --stripe-color: #000;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-space);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle dotted texture used behind sections */
+.bg-dots {
+  background-image: radial-gradient(color-mix(in srgb, var(--foreground) 8%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ---- Vengeance UI utilities (from the library's globals.css) ---- */
+
+/* GlowBorderCard */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glow-angle-rotate {
+  to {
+    --glow-angle: 1turn;
+  }
+}
+
+@layer components {
+  .glow-conic {
+    border-image: conic-gradient(from var(--glow-angle),
+        var(--glow-color-1), var(--glow-color-2), var(--glow-color-3),
+        var(--glow-color-4), var(--glow-color-5), var(--glow-color-6),
+        var(--glow-color-7), var(--glow-color-8), var(--glow-color-9),
+        var(--glow-color-10), var(--glow-color-1)) 1;
+    animation: glow-angle-rotate var(--glow-animation-duration, 4s) linear infinite;
+  }
+}
+
+/* AnimatedRays */
+@keyframes aurora-smooth-bg {
+  from { background-position: 50% 50%, 50% 50%; }
+  to { background-position: 350% 50%, 350% 50%; }
+}
+
+.animate-aurora-bg {
+  animation: aurora-smooth-bg 60s linear infinite;
+}
+
+/* SpotlightNavbar */
+.glass-border {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.spotlight-nav-bg {
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.spotlight-nav-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* PerspectiveGrid tile hover colours (project palette) */
+.tile:nth-child(3n):hover { background-color: var(--accent); }
+.tile:nth-child(3n + 1):hover { background-color: var(--accent-2); }
+.tile:nth-child(3n + 2):hover { background-color: var(--accent-3); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .glow-conic, .animate-aurora-bg { animation: none; }
 }

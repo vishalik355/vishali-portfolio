@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored Vengeance UI registry components (installed via shadcn CLI).
+    "src/components/ui/**",
   ]),
 ]);
 
