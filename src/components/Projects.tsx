@@ -53,7 +53,14 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function Projects() {
   const [filter, setFilter] = useState<ProjectFilter>("All");
-  const visible = filter === "All" ? projects : projects.filter((p) => p.category === filter);
+  const uniqueProjects = projects.filter(
+    (project, index, list) =>
+      list.findIndex((item) => item.name === project.name || item.url === project.url) === index,
+  );
+  const visible =
+    filter === "All"
+      ? uniqueProjects
+      : uniqueProjects.filter((project) => project.category === filter);
 
   return (
     <section id="projects" className="overflow-x-clip py-14 sm:py-16">

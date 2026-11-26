@@ -114,7 +114,7 @@ export const projects: readonly Project[] = [
     subtitle: "Brand & Marketing Studio Website",
     description:
       "Built a bold, editorial website for a Brno-based branding studio, with oversized typography, animated gradient visuals and a smooth case-study flow.",
-    tech: ["React.js", "React", "Tailwind CSS"],
+    tech: ["Next.js", "React", "Tailwind CSS"],
     category: "Next.js",
     url: "https://vondrart.studio/",
     image: "/project-vondrart.png",
@@ -125,7 +125,7 @@ export const projects: readonly Project[] = [
     description:
       "Developed an immersive agency site with rich motion, video-led storytelling and featured project showcases that put the studio's work front and centre.",
     tech: ["React.js", "React", "Framer Motion"],
-    category: "Next.js",
+    category: "React",
     url: "https://uncommondesign.group/",
     image: "/project-uncommon.png",
   },
@@ -135,7 +135,7 @@ export const projects: readonly Project[] = [
     description:
       "Built a dark, cinematic portfolio for a 3D design lab, presenting CGI, motion graphics and interactive WebGL work with a polished loading experience.",
     tech: ["React.js", "React", "WebGL"],
-    category: "Next.js",
+    category: "React",
     url: "https://www.thematicstudio.com/",
     image: "/project-thematic.jpg",
   },
@@ -145,7 +145,7 @@ export const projects: readonly Project[] = [
     description:
       "Created a high-end website for a Los Angeles men's grooming studio, with a video hero, service pages and clear booking calls to action.",
     tech: ["React.js", "React", "Tailwind CSS"],
-    category: "Next.js",
+    category: "React",
     url: "https://prax-lac.vercel.app/",
     image: "/project-prax.png",
   },
@@ -155,7 +155,7 @@ export const projects: readonly Project[] = [
     description:
       "Built a fast, conversion-focused website for an Indian digital marketing agency offering SEO, Google Ads, Meta Ads and performance marketing, with animated hero visuals and clear enquiry flows.",
     tech: ["Next.js", "React", "Tailwind CSS"],
-    category: "Next.js",
+    category: "React",
     url: "https://www.techdigitalmarketer.com/",
     image: "/project-techdigitalmarketer.jpg",
   },
