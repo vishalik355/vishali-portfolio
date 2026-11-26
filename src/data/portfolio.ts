@@ -114,7 +114,7 @@ export const projects: readonly Project[] = [
     subtitle: "Brand & Marketing Studio Website",
     description:
       "Built a bold, editorial website for a Brno-based branding studio, with oversized typography, animated gradient visuals and a smooth case-study flow.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
+    tech: ["React.js", "React", "Tailwind CSS"],
     category: "Next.js",
     url: "https://vondrart.studio/",
     image: "/project-vondrart.png",
@@ -124,7 +124,7 @@ export const projects: readonly Project[] = [
     subtitle: "Creative Digital Agency Website",
     description:
       "Developed an immersive agency site with rich motion, video-led storytelling and featured project showcases that put the studio's work front and centre.",
-    tech: ["Next.js", "React", "Framer Motion"],
+    tech: ["React.js", "React", "Framer Motion"],
     category: "Next.js",
     url: "https://uncommondesign.group/",
     image: "/project-uncommon.png",
@@ -134,7 +134,7 @@ export const projects: readonly Project[] = [
     subtitle: "3D Design & CGI Studio Website",
     description:
       "Built a dark, cinematic portfolio for a 3D design lab, presenting CGI, motion graphics and interactive WebGL work with a polished loading experience.",
-    tech: ["Next.js", "React", "WebGL"],
+    tech: ["React.js", "React", "WebGL"],
     category: "Next.js",
     url: "https://www.thematicstudio.com/",
     image: "/project-thematic.jpg",
@@ -144,7 +144,7 @@ export const projects: readonly Project[] = [
     subtitle: "Premium Grooming Studio Website",
     description:
       "Created a high-end website for a Los Angeles men's grooming studio, with a video hero, service pages and clear booking calls to action.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
+    tech: ["React.js", "React", "Tailwind CSS"],
     category: "Next.js",
     url: "https://prax-lac.vercel.app/",
     image: "/project-prax.png",
