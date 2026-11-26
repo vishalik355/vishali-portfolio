@@ -5,7 +5,7 @@ import TextAnimation from "./ui/staggerText";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-14 sm:py-16">
+    <section id="contact" className="pb-14 pt-0 sm:pb-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative overflow-hidden rounded-[2.5rem] border border-border">
           <div className="absolute inset-0">
