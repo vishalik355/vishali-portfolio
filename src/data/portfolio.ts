@@ -60,6 +60,13 @@ export const skills = [
   "Netlify",
   "Claude Code",
   "Google Gemini API",
+  "UI/UX Design",
+  "Figma",
+  "Adobe Photoshop",
+  "Web Design",
+  "Responsive Design",
+  "Debugging",
+  "Problem-Solving",
 ] as const;
 
 export const services = [
