@@ -5,7 +5,7 @@ import TextAnimation from "./ui/staggerText";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-14 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative overflow-hidden rounded-[2.5rem] border border-border">
           <div className="absolute inset-0">
@@ -16,7 +16,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="pointer-events-none relative px-6 py-20 text-center sm:px-14 sm:py-28">
+          <div className="pointer-events-none relative px-6 py-14 text-center sm:px-14 sm:py-20">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-2">Contact</p>
             <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-6xl">
               <TextAnimation>Let&apos;s Work Together</TextAnimation>
@@ -26,7 +26,7 @@ export default function Contact() {
                 Looking for a Frontend Developer with strong experience in React and modern web
                 technologies? Let&apos;s build fast, scalable, and user-friendly web applications together.
               </p>
-              <div className="pointer-events-auto mt-10 flex flex-col items-center gap-4">
+              <div className="pointer-events-auto mt-8 flex flex-col items-center gap-4">
                 <a
                   href={`mailto:${profile.email}`}
                   className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-3 px-9 py-4 font-semibold text-white shadow-xl shadow-accent/30 transition hover:scale-105 hover:brightness-110"

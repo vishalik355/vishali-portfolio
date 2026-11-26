@@ -82,11 +82,11 @@ export default function Experience() {
   const lineScale = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
-    <section id="experience" className="relative overflow-x-clip py-24">
+    <section id="experience" className="relative overflow-x-clip py-14 sm:py-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <SectionHeading eyebrow="Career" title="Work Experience" />
 
-        <div ref={listRef} className="relative mt-14">
+        <div ref={listRef} className="relative mt-10">
           {/* Track + scroll-driven progress line */}
           <div aria-hidden className="absolute bottom-0 left-[11px] top-0 w-px bg-border sm:left-[18px]" />
           <motion.div
@@ -102,7 +102,7 @@ export default function Experience() {
           </ol>
         </div>
 
-        <Reveal className="mt-16">
+        <Reveal className="mt-12">
           <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted">Education</h3>
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
             {education.map((item) => (

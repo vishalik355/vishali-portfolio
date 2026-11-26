@@ -10,12 +10,12 @@ export default function Services() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section id="services" className="relative py-24">
+    <section id="services" className="relative py-14 sm:py-16">
       <div aria-hidden className="bg-dots absolute inset-0 [mask-image:linear-gradient(transparent,black_30%,black_70%,transparent)]" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow="Frontend Development" title="Services I Provide" centered />
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
             <Reveal key={service.title} delay={0.08 * i}>
               <GlowBorderCard

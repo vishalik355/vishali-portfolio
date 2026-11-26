@@ -8,11 +8,11 @@ const card = "rounded-3xl border border-border bg-surface/70 p-6 sm:p-8";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24">
+    <section id="about" className="relative py-14 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow="About Me" title="I Build Modern Web Applications" />
 
-        <div className="mt-12 grid gap-4 md:grid-cols-6">
+        <div className="mt-8 grid gap-4 md:grid-cols-6">
           <Reveal className="md:col-span-4">
             <div className={`${card} h-full`}>
               <p className="text-lg leading-relaxed text-foreground/80">{profile.about}</p>

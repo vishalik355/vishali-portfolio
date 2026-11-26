@@ -17,7 +17,7 @@ const fadeUp = (delay: number) => ({
 
 export default function Hero() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-24 pb-10">
       <div aria-hidden className="absolute inset-0 opacity-70">
         <AnimatedRays />
       </div>

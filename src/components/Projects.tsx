@@ -1,21 +1,15 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { projectFilters, projects, type Project, type ProjectFilter } from "@/data/portfolio";
 import SectionHeading from "./SectionHeading";
+import { Carousel } from "./ui/apple-cards-carousel";
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({ project }: { project: Project }) {
   return (
-    <motion.article
-      layout
-      initial={{ opacity: 0, y: 30, scale: 0.96 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.94 }}
-      transition={{ duration: 0.45, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-surface/80 transition-colors hover:border-accent/50"
-    >
+    <article className="group relative flex h-full w-[80vw] max-w-[22rem] flex-col overflow-hidden rounded-3xl border border-border bg-surface/80 transition-colors hover:border-accent/50 sm:w-[22rem]">
       <div className="relative aspect-[16/10] overflow-hidden">
         <Image
           src={project.image}
@@ -53,7 +47,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </a>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }
 
@@ -62,12 +56,12 @@ export default function Projects() {
   const visible = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="overflow-x-clip py-14 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow="Portfolio" title="Recent Projects" centered />
 
         <div
-          className="mx-auto mt-10 flex w-fit flex-wrap justify-center gap-1 rounded-full border border-border bg-surface/70 p-1"
+          className="mx-auto mt-8 flex w-fit flex-wrap justify-center gap-1 rounded-full border border-border bg-surface/70 p-1"
           role="group"
           aria-label="Filter projects"
         >
@@ -93,13 +87,13 @@ export default function Projects() {
           ))}
         </div>
 
-        <motion.div layout className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {visible.map((project, i) => (
-              <ProjectCard key={project.name} project={project} index={i} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <Carousel
+          className="mt-6"
+          resetKey={filter}
+          items={visible.map((project) => (
+            <ProjectCard key={project.name} project={project} />
+          ))}
+        />
       </div>
     </section>
   );
